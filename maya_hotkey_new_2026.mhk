@@ -1,0 +1,186 @@
+//Maya Preference 2026 (Release 1)
+//
+//
+
+//
+// The runtime commands referenced by the hotkeys
+//
+runTimeCommand
+	-label ""
+	-annotation ""
+	-longAnnotation ""
+	-category "Custom Scripts"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("panePop;")
+	wwwwww;
+
+runTimeCommand
+	-label ""
+	-annotation ""
+	-longAnnotation ""
+	-category "Custom Scripts"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("string $panel = `getPanel -wf`;\nmodelEditor -e -joints (!`modelEditor -q -joints $panel`) $panel;")
+	hide_bones;
+
+runTimeCommand
+	-label ""
+	-annotation ""
+	-longAnnotation ""
+	-category "Custom Scripts"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("string $panel = `getPanel -wf`;\nmodelEditor -e -nurbsCurves (!`modelEditor -q -nurbsCurves $panel`) $panel;")
+	hide_shapes;
+
+runTimeCommand
+	-label ""
+	-annotation ""
+	-longAnnotation ""
+	-category "Custom Scripts"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("string $panel = `getPanel -wf`;\nmodelEditor -e -polymeshes (!`modelEditor -q -polymeshes $panel`) $panel;")
+	hide_geometry;
+
+//
+// The name commands referenced by the hotkeys
+//
+nameCommand
+	-annotation "PlaybackToggleNameCommand"
+	-sourceType "mel"
+	-command ("PlaybackToggle")
+	PlaybackToggleNameCommand;
+
+nameCommand
+	-annotation "ShowHotboxNameCommand"
+	-sourceType "mel"
+	-command ("ShowHotbox")
+	ShowHotboxNameCommand;
+
+nameCommand
+	-annotation "HideHotboxNameCommand"
+	-sourceType "mel"
+	-command ("HideHotbox")
+	HideHotboxNameCommand;
+
+nameCommand
+	-annotation "SetKeyNameCommand"
+	-sourceType "mel"
+	-command ("SetKey")
+	SetKeyNameCommand;
+
+nameCommand
+	-annotation "PreviousFrameNameCommand"
+	-sourceType "mel"
+	-command ("PreviousFrame")
+	PreviousFrameNameCommand;
+
+nameCommand
+	-annotation "NextFrameNameCommand"
+	-sourceType "mel"
+	-command ("NextFrame")
+	NextFrameNameCommand;
+
+nameCommand
+	-annotation "wwwwwwNameCommand"
+	-sourceType "mel"
+	-command ("wwwwww")
+	wwwwwwNameCommand;
+
+nameCommand
+	-annotation "hide_bonesNameCommand"
+	-sourceType "mel"
+	-command ("hide_bones")
+	hide_bonesNameCommand;
+
+nameCommand
+	-annotation "hide_geometryNameCommand"
+	-sourceType "mel"
+	-command ("hide_geometry")
+	hide_geometryNameCommand;
+
+nameCommand
+	-annotation "hide_shapesNameCommand"
+	-sourceType "mel"
+	-command ("hide_shapes")
+	hide_shapesNameCommand;
+
+nameCommand
+	-annotation "GraphEditorNameCommand"
+	-sourceType "mel"
+	-command ("GraphEditor")
+	GraphEditorNameCommand;
+
+//
+// The user hotkeys
+//
+//
+// The hotkey set
+//
+hotkeySet -source "Maya_Default" -current maya_hotkey;
+//
+// The hotkey contexts and hotkeys
+//
+hotkey -keyShortcut "," -alt -name ("");
+hotkey -keyShortcut "." -alt -name ("");
+hotkey -keyShortcut "Space" -ctl -name ("");
+hotkey -keyShortcut "\"" -name ("GraphEditorNameCommand");
+hotkey -keyShortcut "1" -name ("PreviousFrameNameCommand");
+hotkey -keyShortcut "v" -alt -name ("");
+hotkey -keyShortcut "Space" -ctl -alt -name ("ShowHotboxNameCommand");
+hotkey -keyShortcut "Space" -releaseName ("");
+hotkey -keyShortcut "a" -name ("hide_bonesNameCommand");
+hotkey -keyShortcut "d" -name ("hide_shapesNameCommand");
+hotkey -keyShortcut "q" -releaseName ("");
+hotkey -keyShortcut "w" -alt -name ("wwwwwwNameCommand");
+hotkey -keyShortcut "2" -name ("NextFrameNameCommand");
+hotkey -keyShortcut "a" -releaseName ("");
+hotkey -keyShortcut "d" -releaseName ("");
+hotkey -keyShortcut "q" -name ("SetKeyNameCommand");
+hotkey -keyShortcut "s" -name ("hide_geometryNameCommand");
+hotkey -keyShortcut "Space" -ctl -alt -releaseName ("HideHotboxNameCommand");
+hotkey -keyShortcut "Space" -name ("PlaybackToggleNameCommand");
+hotkeyCtx -type "Editor" -addClient "nodeEditorPanel";
+hotkeyCtx -type "Editor" -addClient "renderWindowPanel";
+hotkeyCtx -type "Editor" -addClient "hyperGraphPanel";
+hotkeyCtx -type "Editor" -addClient "motionMakerEditor";
+hotkeyCtx -type "Editor" -addClient "polyTexturePlacementPanel";
+hotkeyCtx -type "Editor" -addClient "profilerPanel";
+hotkeyCtx -type "Editor" -addClient "graphEditor";
+hotkeyCtx -type "Editor" -addClient "outlinerPanel";
+hotkeyCtx -type "Editor" -addClient "dopeSheetPanel";
+hotkeyCtx -type "Editor" -addClient "timeEditorPanel";
+hotkeyCtx -type "Editor" -addClient "shapePanel";
+hotkeyCtx -type "Editor" -addClient "posePanel";
+hotkeyCtx -type "Editor" -addClient "hyperShadePanel";
+hotkeyCtx -type "Tool" -addClient "texCutContext";
+hotkeyCtx -type "Tool" -addClient "SymmetrizeUVBrush";
+hotkeyCtx -type "Tool" -addClient "bpDraw";
+hotkeyCtx -type "Tool" -addClient "sculptMeshCache";
+hotkeyCtx -type "Tool" -addClient "Unfold3DBrush";
+hotkeyCtx -type "Tool" -addClient "texSculptCacheContext";
+hotkeyCtx -type "Tool" -addClient "polyCutUV";
+hotkeyCtx -type "Tool" -addClient "xgmIGBrush";
